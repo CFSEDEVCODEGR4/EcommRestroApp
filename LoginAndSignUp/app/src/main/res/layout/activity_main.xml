@@ -6,9 +6,9 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:gravity="center"
-    android:background="@drawable/loginbkg"
     tools:context=".MainActivity">
+
+    <include layout="@layout/my_toolbar"/>
 
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
@@ -28,10 +28,9 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Login"
+            android:text="Sign In"
             android:id="@+id/loginText"
-            android:textSize="36dp"
-            android:textAlignment="center"
+            android:textSize="26dp"
             android:textStyle="bold"
             android:textColor="@color/purple_200"/>
 
@@ -77,6 +76,14 @@
             android:layout_marginTop="30dp"
             android:backgroundTint="@color/purple_200"
             app:cornerRadius = "20dp"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/forgotPassword"
+            android:id="@+id/activity_forgot_password"
+            android:textSize="16dp"
+            android:textStyle="bold"
+            android:textColor="@color/purple_200"/>
 
 
 

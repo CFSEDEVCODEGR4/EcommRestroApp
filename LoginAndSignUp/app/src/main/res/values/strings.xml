@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">LoginAndSignUp</string>
+    <string name="forgotPassword">Forgot password?</string>>
 </resources>

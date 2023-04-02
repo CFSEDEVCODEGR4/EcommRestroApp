@@ -15,11 +15,13 @@ class RegistrationActivity : AppCompatActivity() {
     lateinit var editUName: EditText
     lateinit var editUEmail: EditText
     lateinit var editUPassword: EditText
+    lateinit var editMnumber: EditText
 
     @SuppressLint("MissingInflatedId")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_registration)
+        //supportActionBar!!.setDisplayHomeAsUpEnabled(true)
 
         doRegistration = findViewById(R.id.registrationBtn)
         editName = findViewById(R.id.editname)
@@ -27,12 +29,15 @@ class RegistrationActivity : AppCompatActivity() {
         editUEmail = findViewById(R.id.editemail)
         editName = findViewById(R.id.editname)
         editUPassword = findViewById(R.id.editpassword)
+        editMnumber = findViewById(R.id.editMobile)
 
         doRegistration.setOnClickListener{
             if(editName.text.toString().isNotEmpty() &&
                 editUName.text.toString().isNotEmpty() &&
                 editUEmail.text.toString().isNotEmpty() &&
-                editUPassword.text.toString().isNotEmpty() ){
+                editUPassword.text.toString().isNotEmpty() &&
+                editMnumber.text.toString().isNotEmpty()
+            ){
                 Toast.makeText(this,"Registration Successful!", Toast.LENGTH_SHORT).show()
                 startActivity(Intent(this,MainActivity::class.java))
             }else{
